@@ -6,7 +6,7 @@ import os
 import binascii
 
 def get_FileSize(filePath):
-    filePath = unicode(filePath,'utf8')
+    filePath = str(filePath,'utf8')
     fsize = os.path.getsize(filePath)
     size = fsize/float(1024)
     return round(size,2)

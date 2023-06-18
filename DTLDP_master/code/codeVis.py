@@ -33,13 +33,13 @@ def getMatrixfrom_asm(filename, startindex = 0, pixnum = 89478485):
     return fh
 
 def get_FileSize(filePath):
-    filePath = unicode(filePath,'utf8')
+    filePath = str(filePath,'utf8')
     fsize = os.path.getsize(filePath)
     size = fsize/float(1024)
     return round(size,2)
 
 def get_FileSize(filePath):
-    filePath = unicode(filePath,'utf8')
+    filePath = str(filePath,'utf8')
     fsize = os.path.getsize(filePath)
     size = fsize/float(1024)
     return round(size,2)
