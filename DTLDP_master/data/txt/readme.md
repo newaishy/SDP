@@ -1,1 +1,1 @@
-Please put the experimental data set in this folder.
+The experimental data set is placed in this folder.
