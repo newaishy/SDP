@@ -85,7 +85,7 @@ def get_tsne_img(what, loader, model, gpu=True):
 def image_classification_predict(loader, model, test_10crop=True, gpu=True):
     start_test = True
     if test_10crop:
-        iter_test = [iter(loader['test' + str(i)]) for i in xrange(10)]
+        iter_test = [iter(loader['test' + str(i)]) for i in range(10)]
         for i in range(len(loader['test0'])):
             data = [iter_test[j].next() for j in range(10)]
             inputs = [data[j][0] for j in range(10)]
@@ -127,7 +127,7 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
     start_test = True
     names = []
     if test_10crop:
-        iter_test = [iter(loader['test' + str(i)]) for i in xrange(10)]
+        iter_test = [iter(loader['test' + str(i)]) for i in range(10)]
         for i in range(len(loader['test0'])):
             data = [iter_test[j].next() for j in range(10)]
             inputs = [data[j][0] for j in range(10)]
