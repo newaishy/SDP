@@ -117,14 +117,21 @@ def pil_loader(path):
         with Image.open(f) as img:
             return img.convert('RGB')
 
-
 def accimage_loader(path):
-    import accimage
+    import PIL.Image
     try:
-        return accimage.Image(path)
+        return PIL.Image(path)
     except IOError:
         # Potentially a decoding problem, fall back to PIL.Image
         return pil_loader(path)
+
+# def accimage_loader(path):
+#     import accimage
+#     try:
+#         return accimage.Image(path)
+#     except IOError:
+#         # Potentially a decoding problem, fall back to PIL.Image
+#         return pil_loader(path)
 
 
 def default_loader(path):
